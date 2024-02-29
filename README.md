@@ -1,4 +1,4 @@
 # ISTE-Website
-Repository for ISTE K.K.W.I.E.E.R Website<br>
-<hr><br>
+Repository for ISTE K.K.W.I.E.E.R Website
+<hr>
 This Repository contains all appropriate codes and Web designs which are necessary for building ISTE K.K.W.I.E.E.R Website
