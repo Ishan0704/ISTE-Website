@@ -1,10 +1,11 @@
 *{
     padding: 0px;
-    margin: 0px;
+    margin: 2px;
+    padding-left:5px;
 }
 
-.col,.col-2{
-    border:1px solid black
+.col,.col-2,.col-1{
+    border:1px solid black;
     
 }
 
@@ -15,4 +16,20 @@
 
 .title{
     padding-top: 25px;
+}
+
+.body{
+    padding-top: 5px;
+}
+button{
+    height:40px;
+    width:45px;
+}
+
+.form-outline{
+    
+    height:50px;
+}
+.input-group{
+    padding-top: 6px;
 }
