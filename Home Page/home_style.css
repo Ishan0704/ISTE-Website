@@ -33,3 +33,12 @@ button{
 .input-group{
     padding-top: 6px;
 }
+.founder{
+    max-width:280px;
+    max-height: 320px;
+}
+.B-D-Barve{
+    border:1px solid black;
+    padding-right: 10px;
+    padding-top: 10px;
+}
