@@ -1,0 +1,18 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+.col,.col-2{
+    border:1px solid black
+    
+}
+
+.image{
+    padding-left:20px;
+    height:100px;
+}
+
+.title{
+    padding-top: 25px;
+}
