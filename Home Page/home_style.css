@@ -34,8 +34,8 @@ button{
     padding-top: 6px;
 }
 .founder{
-    max-width:280px;
-    max-height: 320px;
+    max-width:230px;
+    max-height: 280px;
 }
 .B-D-Barve{
     border:1px solid black;
@@ -65,7 +65,7 @@ button{
 }
 
 .location-container {
-    width: 690px;
+    width: 500px;
     height: 250px; /* Adjust as needed */
     overflow: hidden;
 }
