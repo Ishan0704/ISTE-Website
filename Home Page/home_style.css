@@ -35,7 +35,7 @@ button{
 }
 .founder{
     max-width:230px;
-    max-height: 280px;
+    max-height:fit-content;
 }
 .B-D-Barve{
     border:1px solid black;
@@ -74,4 +74,7 @@ button{
     width: 100%;
     height: 100%;
     border: 0;
+}
+.same{
+    padding: 0px;
 }
