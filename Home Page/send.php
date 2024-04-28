@@ -34,9 +34,9 @@ if(isset($_POST["submit"])){
     $mail->Body = "Name: $name<br>Email: $email<br>Phone Number: $phone<br>Year: $year<br>Branch: $branch<br>Subject: $subject<br>Query: $query";
 
     if($mail->send()){
-        echo "<script>alert('Send successfully');document.location.href='index.html';</script>";
+        echo "<script>alert('Send successfully');document.location.href='home.html';</script>";
     } else {
-        echo "<script>alert('Send failed');document.location.href='index.html';</script>";
+        echo "<script>alert('Send failed');document.location.href='home.html';</script>";
     }
 }
 ?>

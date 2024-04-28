@@ -136,7 +136,8 @@
                                     <label for="email">3.<i class="fa-solid fa-envelope"></i> Email:</label>
                                     <input type="email" id="email" name="email" required placeholder="Enter E-mail"><br>
 
-                                    <label for="year">4.<i class="fa-solid fa-user-graduate"></i> Year Of Education :<br>
+                                    <label for="year">4.<i class="fa-solid fa-user-graduate"></i> Year Of Education
+                                        :<br>
 
                                         <label for="firstYear" style="padding-top: 10px;;">
                                             <input type="radio" id="firstYear" name="year" value="First Year" required>
@@ -157,6 +158,8 @@
                                         <br>
                                     </label>
 
+                                    <input type="hidden" id="branch" name="branch">
+                                    <!-- Hidden input field for selected branch -->
                                     <div class="dropdown">
                                         5.<i class="fa-solid fa-graduation-cap"></i>
                                         <button type="button" class="btn btn-outline-info dropdown-toggle"
@@ -169,15 +172,15 @@
                                                 onclick="selectBranch('Artificial Intelligence and Data Science')">Artificial
                                                 Intelligence and Data Science</a>
                                             <a class="dropdown-item" href="#"
-                                                onclick="selectBranch('Chemical')">Chemical</a>
-                                            <a class="dropdown-item" href="#" onclick="selectBranch('Civil')">Civil</a>
+                                                onclick="selectBranch('Chemical Engineering')">Chemical Engineering</a>
+                                            <a class="dropdown-item" href="#" onclick="selectBranch('Civil Engineering')">Civil Engineering</a>
                                             <a class="dropdown-item" href="#"
-                                                onclick="selectBranch('Computer')">Computer</a>
+                                                onclick="selectBranch('Computer Engineering')">Computer Engineering</a>
                                             <a class="dropdown-item" href="#"
                                                 onclick="selectBranch('Computer Science and Design')">Computer Science
                                                 and Design</a>
                                             <a class="dropdown-item" href="#"
-                                                onclick="selectBranch('Electrical')">Electrical</a>
+                                                onclick="selectBranch('Electrical Engineering')">Electrical Engineering</a>
                                             <a class="dropdown-item" href="#"
                                                 onclick="selectBranch('Electronics and Telecommunication')">Electronics
                                                 and Telecommunication</a>
@@ -185,7 +188,7 @@
                                                 onclick="selectBranch('Information Technology')">Information
                                                 Technology</a>
                                             <a class="dropdown-item" href="#"
-                                                onclick="selectBranch('Mechanical')">Mechanical</a>
+                                                onclick="selectBranch('Mechanical Engineering')">Mechanical Engineering</a>
                                             <a class="dropdown-item" href="#"
                                                 onclick="selectBranch('Robotics and Automation')">Robotics and
                                                 Automation</a>
@@ -193,22 +196,29 @@
                                     </div>
                                     <span id="selectedBranch" style="padding-left: 50px;">Selected Branch: None</span>
                                     <br>
-                                    
+
+                                    <!-- JavaScript function to update the hidden input field with the selected branch -->
                                     <script>
                                         function selectBranch(branch) {
                                             document.getElementById('selectedBranch').innerText = "Selected Branch: " + branch;
+                                            document.getElementById('branch').value = branch; // Update hidden input field with selected branch
                                         }
                                     </script>
-                                    
+
                                     <br>
-                                    <label for="subject-of-query">6.<i class="fa-solid fa-pen-fancy"></i> Subject Of Query:</label>
-                                    <input type="text" id="subject" name="subject" placeholder="Enter Subject Of Query" required><br>
+                                    <label for="subject-of-query">6.<i class="fa-solid fa-pen-fancy"></i> Subject Of
+                                        Query:</label>
+                                    <input type="text" id="subject" name="subject" placeholder="Enter Subject Of Query"
+                                        required><br>
                                     <br>
 
-                                    <label for="query">7.<i class="fa-solid fa-keyboard"></i> Type Your Query:</label><br>
-                                    <textarea id="query" name="query" required style="width: 420px; height: 100px;" placeholder="Type Your Query" ></textarea><br><br>
+                                    <label for="query">7.<i class="fa-solid fa-keyboard"></i> Type Your
+                                        Query:</label><br>
+                                    <textarea id="query" name="query" required style="width: 420px; height: 100px;"
+                                        placeholder="Type Your Query"></textarea><br><br>
 
-                                    <button type="submit" style="margin-left: 150px; width:100px; height:auto" class="btn btn-outline-success" name="submit">Submit</button>
+                                    <button type="submit" style="margin-left: 150px; width:100px; height:auto"
+                                        class="btn btn-outline-success" name="submit">Submit</button>
                                 </form>
                             </div>
                         </div>
