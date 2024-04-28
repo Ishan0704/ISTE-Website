@@ -39,12 +39,12 @@
             <a href="https://kkwagh.edu.in/engineering/" target="_blank">
                 <img class="image" src="/ISTE-Website/img/kkw-logo.png" alt="KKW-Logo">
             </a>
-            
+
         </div>
     </div>
 
     <div class="body">
-        <div class="row" >
+        <div class="row">
             <div class="col text-center" style="padding: 5px;">
                 <a href="home.html">Home</a>
             </div>
@@ -68,10 +68,11 @@
                                 Heyy !! <br>
                                 Excited To Be A Part Of ISTE-KKWIEER Family ?<br>
                                 Click On The Image To Fill Membership Form <br> <br>
-                                <a
-                                    href="https://docs.google.com/forms/d/e/1FAIpQLSdpHjJEeuY0eFg7_-f5jqEGjPFUSBurw-5bWeRUs9hHU9f6hQ/viewform" target="_blank">
-                                    
-                                    <img src="/ISTE-Website/img/membership.jpg" alt="Membership Form Image" style="max-width: 450px; padding: 0px;">
+                                <a href="https://docs.google.com/forms/d/e/1FAIpQLSdpHjJEeuY0eFg7_-f5jqEGjPFUSBurw-5bWeRUs9hHU9f6hQ/viewform"
+                                    target="_blank">
+
+                                    <img src="/ISTE-Website/img/membership.jpg" alt="Membership Form Image"
+                                        style="max-width: 450px; padding: 0px;">
                                 </a>
                                 <br><br>
                                 Membership Fees : <br>
@@ -105,7 +106,125 @@
                     Contact<br>Us
                 </a>
             </div>
-            <div class="col text-center" style="padding: 5px;">Help</div>
+            <div class="col text-center" style="padding: 5px;">
+                <a href="#" id="helpLink">Help</a>
+
+                <!-- Modal -->
+                <div class="modal fade" id="helpModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Help</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body" style="text-align:left">
+                                Have Some Query !! <br>
+                                Tell Us By Filling Out This Form
+
+                                <form id="queryForm" action="send.php" method="post" style="padding-top: 15px;">
+
+                                    <label for="name">1.<i class="fa-solid fa-user"></i> Name:</label>
+                                    <input type="text" id="name" name="name" required placeholder="Enter Name"><br>
+
+                                    <label for="phone">2.<i class="fa-solid fa-phone"></i> Phone:</label>
+                                    <input type="tel" id="phone" name="phone" pattern="[0-9]{10}"
+                                        placeholder="Enter Phone number" required><br>
+
+                                    <label for="email">3.<i class="fa-solid fa-envelope"></i> Email:</label>
+                                    <input type="email" id="email" name="email" required placeholder="Enter E-mail"><br>
+
+                                    <label for="year">4.<i class="fa-solid fa-user-graduate"></i> Year Of Education :<br>
+
+                                        <label for="firstYear" style="padding-top: 10px;;">
+                                            <input type="radio" id="firstYear" name="year" value="First Year" required>
+                                            First Year
+                                        </label>
+                                        <label for="secondYear">
+                                            <input type="radio" id="secondYear" name="year" value="Second Year"> Second
+                                            Year
+                                        </label>
+                                        <label for="thirdYear">
+                                            <input type="radio" id="thirdYear" name="year" value="Third Year"> Third
+                                            Year
+                                        </label>
+                                        <label for="fourthYear">
+                                            <input type="radio" id="fourthYear" name="year" value="Fourth Year"> Fourth
+                                            Year
+                                        </label>
+                                        <br>
+                                    </label>
+
+                                    <div class="dropdown">
+                                        5.<i class="fa-solid fa-graduation-cap"></i>
+                                        <button type="button" class="btn btn-outline-info dropdown-toggle"
+                                            id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                                            aria-expanded="false" style="width: 220px;">
+                                            Choose Branch
+                                        </button>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            <a class="dropdown-item" href="#"
+                                                onclick="selectBranch('Artificial Intelligence and Data Science')">Artificial
+                                                Intelligence and Data Science</a>
+                                            <a class="dropdown-item" href="#"
+                                                onclick="selectBranch('Chemical')">Chemical</a>
+                                            <a class="dropdown-item" href="#" onclick="selectBranch('Civil')">Civil</a>
+                                            <a class="dropdown-item" href="#"
+                                                onclick="selectBranch('Computer')">Computer</a>
+                                            <a class="dropdown-item" href="#"
+                                                onclick="selectBranch('Computer Science and Design')">Computer Science
+                                                and Design</a>
+                                            <a class="dropdown-item" href="#"
+                                                onclick="selectBranch('Electrical')">Electrical</a>
+                                            <a class="dropdown-item" href="#"
+                                                onclick="selectBranch('Electronics and Telecommunication')">Electronics
+                                                and Telecommunication</a>
+                                            <a class="dropdown-item" href="#"
+                                                onclick="selectBranch('Information Technology')">Information
+                                                Technology</a>
+                                            <a class="dropdown-item" href="#"
+                                                onclick="selectBranch('Mechanical')">Mechanical</a>
+                                            <a class="dropdown-item" href="#"
+                                                onclick="selectBranch('Robotics and Automation')">Robotics and
+                                                Automation</a>
+                                        </div>
+                                    </div>
+                                    <span id="selectedBranch" style="padding-left: 50px;">Selected Branch: None</span>
+                                    <br>
+                                    
+                                    <script>
+                                        function selectBranch(branch) {
+                                            document.getElementById('selectedBranch').innerText = "Selected Branch: " + branch;
+                                        }
+                                    </script>
+                                    
+                                    <br>
+                                    <label for="subject-of-query">6.<i class="fa-solid fa-pen-fancy"></i> Subject Of Query:</label>
+                                    <input type="text" id="subject" name="subject" placeholder="Enter Subject Of Query" required><br>
+                                    <br>
+
+                                    <label for="query">7.<i class="fa-solid fa-keyboard"></i> Type Your Query:</label><br>
+                                    <textarea id="query" name="query" required style="width: 420px; height: 100px;" placeholder="Type Your Query" ></textarea><br><br>
+
+                                    <button type="submit" style="margin-left: 150px; width:100px; height:auto" class="btn btn-outline-success" name="submit">Submit</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    document.getElementById('helpLink').addEventListener('click', function (event) {
+                        event.preventDefault(); // Prevent the default action of the anchor tag
+                        $('#helpModal').modal('show'); // Show the modal
+                    });
+                    $('#myModal').on('shown.bs.modal', function () {
+                        $('#myInput').trigger('focus')
+                    })
+                </script>
+
+            </div>
         </div>
 
         <div class="row">
@@ -202,15 +321,15 @@
                 <div>Contact-us</div>
                 <hr>
                 <div style="margin-top: 10px;">
-                    <i class="fa-solid fa-envelope"></i> Email : 
+                    <i class="fa-solid fa-envelope"></i> Email :
                     <a href="mailto:istekkwieer2324@gmail.com" target="_blank">istekkwieer2324@gmail.com</a>
                 </div>
                 <div style="margin-top: 10px;">
-                    <i class="fa-sharp fa-solid fa-phone"></i> Contact Number : 
+                    <i class="fa-sharp fa-solid fa-phone"></i> Contact Number :
                     <a href="tel:+919322423092" target="_blank">+919322423092</a>
                 </div>
                 <div style="margin-top: 10px;">
-                    <i class="fa-sharp fa-solid fa-phone"></i> Alterate Number : 
+                    <i class="fa-sharp fa-solid fa-phone"></i> Alterate Number :
                     <a href="tel:+918329310531" target="_blank">+918329310531 </a>
                 </div>
                 <div style="margin-top: 10px;">
@@ -227,7 +346,7 @@ Nashik, Maharashtra 422003
                 <div class="insta-link">
                     <a href="https://www.instagram.com/iste_kkwieer?igsh=MTB1cHNlZ3lmOHE0dg==" class="insta"
                         target="_blank">
-                        <i class="fa-brands fa-square-instagram fa-2xl" style="color: #d2144d;"></i>  Instagram
+                        <i class="fa-brands fa-square-instagram fa-2xl" style="color: #d2144d;"></i> Instagram
                     </a>
                 </div>
             </div>
