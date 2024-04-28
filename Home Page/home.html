@@ -13,12 +13,12 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
         integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
 
-        <style >
-            .corousal-inner img{
-                aspect-ratio: 2/3;
-                object-fit: contain;
-            }
-        </style>
+    <style>
+        .corousal-inner img {
+            aspect-ratio: 2/3;
+            object-fit: contain;
+        }
+    </style>
 
 </head>
 
@@ -44,7 +44,50 @@
                 <a href="home.html">Home</a>
             </div>
             <div class="col text-center" style="padding: 5px;">Events</div>
-            <div class="col text-center" style="padding: 5px;">Membership</div>
+            <div class="col text-center" style="padding: 5px;">
+                <!-- Button trigger modal -->
+                <a href="#" id="membershipLink">Membership</a>
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Membership Form</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body" style="text-align:left">
+                                Heyy !! <br>
+                                Excited To Be A Part Of ISTE-KKWIEER Family ?<br>
+                                Click On The Image To Fill Membership Form <br> <br>
+                                <a
+                                    href="https://docs.google.com/forms/d/e/1FAIpQLSdpHjJEeuY0eFg7_-f5jqEGjPFUSBurw-5bWeRUs9hHU9f6hQ/viewform" target="_blank">
+                                    
+                                    <img class="Membership"src="/ISTE-Website/img/Membership.jpg" alt="Membership Form Image">
+                                </a>
+                                <br><br>
+                                Membership Fees : <br>
+                                1. First Year: ₹ 295/- <br>
+                                2. Second Year: ₹ 236/- <br>
+                                3. Third Year: ₹ 177/-
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    document.getElementById('membershipLink').addEventListener('click', function (event) {
+                        event.preventDefault(); // Prevent the default action of the anchor tag
+                        $('#exampleModal').modal('show'); // Show the modal
+                    });
+                    $('#myModal').on('shown.bs.modal', function () {
+                        $('#myInput').trigger('focus')
+                    })
+                </script>
+            </div>
             <div class="col text-center" style="padding: 5px;">Blog</div>
             <div class="col text-center" style="padding: 5px;">
                 <a href="#follow-us">
@@ -52,7 +95,7 @@
                 </a>
             </div>
             <div class="col text-center" style="padding: 5px;">
-                
+
                 <a href="#contact">
                     Contact<br>Us
                 </a>
@@ -65,12 +108,12 @@
                 <div>
                     <img class="founder" src="/ISTE-Website/img/V.D.Barve.jpg" alt="B.D.BARVE">
                 </div>
-                <div style="padding-top: 20px;"class="text-center">Dr. V. D. Barve</div>
+                <div style="padding-top: 20px;" class="text-center">Dr. V. D. Barve</div>
                 <div class="text-center">Founder of ISTE</div>
                 <div class="text-center">K.K.W.I.E.ER</div>
             </div>
             <div class="col">
-                <div id="carouselExampleControls" class="carousel slide same" data-ride="carousel" > 
+                <div id="carouselExampleControls" class="carousel slide same" data-ride="carousel">
                     <div class="carousel-inner same">
                         <div class="carousel-item active ">
                             <img class="d-block" src="/ISTE-Website/img/c1.jpg" alt="First slide"
@@ -101,15 +144,18 @@
                     <i class="fa-solid fa-bolt fa-xl" style="color: #FFD43B;"></i>
                 </h6>
                 <ul>
-                    <li>Master Student's Program <span class="badge badge-secondary rounded-pill bg-info">New</span></li>
+                    <li>Master Student's Program <span class="badge badge-secondary rounded-pill bg-info">New</span>
+                    </li>
                 </ul>
                 <br>
                 <h6>Past Events
                     <i class="fa-solid fa-bolt fa-xl" style="color: #FFD43B;"></i>
                 </h6>
                 <ul>
-                    <li>Eassy Writing Competation <span class="badge badge-secondary rounded-pill bg-danger">Old</span></li>
-                    <li>Poster Making Competation <span class="badge badge-secondary rounded-pill bg-danger">Old</span></li>
+                    <li>Eassy Writing Competation <span class="badge badge-secondary rounded-pill bg-danger">Old</span>
+                    </li>
+                    <li>Poster Making Competation <span class="badge badge-secondary rounded-pill bg-danger">Old</span>
+                    </li>
                     <li>Neuron <span class="badge badge-secondary rounded-pill bg-danger">Old</span></li>
                 </ul>
             </div>
@@ -144,7 +190,8 @@
         <div class="footer row">
             <div id="contact" class="col-3 border">
                 <div>Contact-US</div>
-                <div>Email: <a href="mailto:istekkwieer2324@gmail.com" target="_blank">istekkwieer2324@gmail.com</a></div>
+                <div>Email: <a href="mailto:istekkwieer2324@gmail.com" target="_blank">istekkwieer2324@gmail.com</a>
+                </div>
             </div>
             <div id="follow-us" class="col-3 border">
                 <div>follow-us</div>
@@ -156,7 +203,7 @@
                     </a>
                 </div>
             </div>
-            
+
             <div class="location " class="col-4 border">
                 <div>
                     <div>
@@ -179,8 +226,13 @@
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+
 </body>
 
 </html>
