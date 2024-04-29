@@ -3,7 +3,9 @@
     margin: 2px;
     padding-left:5px;
 }
-
+html {
+    scroll-behavior: smooth;
+}
 .col,.col-2,.col-1,.col-4,.col-3{
     border: 1px #050fa1 solid;
     
