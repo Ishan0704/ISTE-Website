@@ -5,7 +5,7 @@
 }
 
 .col,.col-2,.col-1,.col-4,.col-3{
-    border:1px solid black;
+    border: 1px #050fa1 solid;
     
 }
 
@@ -16,8 +16,10 @@
 
 .title{
     padding-top: 25px;
+    background-color: #050fa1;
+    color: antiquewhite;
+    font-size: large;
 }
-
 .body{
     padding-top: 5px;
 }
@@ -53,12 +55,7 @@ button{
     /* border: 1px solid black; */
     display: block;
 }
-.insta-link{
-    padding-top: 10px;
-}
-.insta{
-    padding-left: 10px;
-}
+
 
 .contact{
     display: block;
