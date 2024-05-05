@@ -24,18 +24,22 @@
 
 <body>
 
-    <div class=" header row ">
-        <div class="iste-logo col-2" style="border-color:#050fa1;">
+    <div class=" header row " style="background-color: aliceblue; border-bottom: 1px black solid;">
+        <div class="iste-logo col-2" style="border-color:aliceblue;">
             <a href="http://www.isteonline.in/" target="_blank">
                 <img class="image" src="/ISTE-Website/img/iste-logo.jpeg" alt="ISTE-logo">
             </a>
         </div>
 
-        <div class="title col text-center justify-content-center" style="font-size: large;">
-            <div>INDIAN SOCIETY FOR TECHNICAL EDUCATION</div>
-            <div>K.K.W.I.E.E.R</div>
+        <div id="keys" class="col d-flex align-items-center justify-content-end" >
+            <a href="#home">Home</a>
+            <a href="#overview">Overview</a>
+            <a href="#events">Events</a>
+            <a href="#" id="membershipLink">Membership</a>
+            <a href="#contact">Contact</a>
+            <a href="" id="helpLink">Help</a>
         </div>
-        <div class="kkw-logo col-2" style="border-color:#050fa1;">
+        <div class="kkw-logo col-2" style="border-color:aliceblue">
             <a href="https://kkwagh.edu.in/engineering/" target="_blank">
                 <img class="image" src="/ISTE-Website/img/kkw-logo.png" alt="KKW-Logo">
             </a>
@@ -44,221 +48,24 @@
     </div>
 
     <div class="body" style="padding: 0%; max-height:40px;">
-        <div class="row" style="border-color: white; padding:5px; background-color: #050fa1;">
-            <div class="col text-center border" style="background-color: white; font-size: large;padding:5px">
-                <a href="home.html">Home</a>
-            </div>
-            <div class="col text-center border" style="background-color: white; font-size: large;padding:5px">Events
-            </div>
-            <div class="col text-center border" style="background-color: white; font-size: large;padding:5px">
-                <!-- Button trigger modal -->
-                <a href="#" id="membershipLink">Membership</a>
-
-                <!-- Modal -->
-                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                    aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Membership Form</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body" style="text-align:left">
-                                Heyy !! <br>
-                                Excited To Be A Part Of ISTE-KKWIEER Family ?<br>
-                                Click On The Image To Fill Membership Form <br> <br>
-                                <a href="https://docs.google.com/forms/d/e/1FAIpQLSdpHjJEeuY0eFg7_-f5jqEGjPFUSBurw-5bWeRUs9hHU9f6hQ/viewform"
-                                    target="_blank">
-                                    <img src="/ISTE-Website/img/membership.jpg" alt="Membership Form Image"
-                                        style="max-width: 450px; padding: 0px;border: 1px black solid;">
-                                </a>
-                                <br><br>
-                                Membership Fees : <br>
-                                1. First Year: ₹ 295/- <br>
-                                2. Second Year: ₹ 236/- <br>
-                                3. Third Year: ₹ 177/-
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <script>
-                    document.getElementById('membershipLink').addEventListener('click', function (event) {
-                        event.preventDefault(); // Prevent the default action of the anchor tag
-                        $('#exampleModal').modal('show'); // Show the modal
-                    });
-                    $('#myModal').on('shown.bs.modal', function () {
-                        $('#myInput').trigger('focus')
-                    })
-                </script>
-            </div>
-            <div class="col text-center border" style="background-color: white; font-size: large;padding:5px">Blog
-            </div>
-            <div class=" col text-center border" style="background-color: white; font-size: large;padding:5px">
-                <a href="#follow-us">
-                    Follow-Us
-                </a>
-            </div>
-            <div class="col text-center border" style="background-color: white; font-size: large;padding:5px">
-
-                <a href="#contact">
-                    Contact-Us
-                </a>
-            </div>
-            <div class="col text-center border" style="background-color: white; font-size: large;padding:5px">
-                <a href="#" id="helpLink">Help</a>
-
-                <!-- Modal -->
-                <div class="modal fade" id="helpModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                    aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Help</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body" style="text-align:left">
-                                Have Some Query !! <br>
-                                Tell Us By Filling Out This Form
-
-                                <form id="queryForm" action="send.php" method="post" style="padding-top: 15px;">
-
-                                    <label for="name">1.<i class="fa-solid fa-user"></i> Name:</label>
-                                    <input type="text" id="name" name="name" required placeholder="Enter Name"><br>
-
-                                    <label for="phone">2.<i class="fa-solid fa-phone"></i> Phone:</label>
-                                    <input type="tel" id="phone" name="phone" pattern="[0-9]{10}"
-                                        placeholder="Enter Phone number" required><br>
-
-                                    <label for="email">3.<i class="fa-solid fa-envelope"></i> Email:</label>
-                                    <input type="email" id="email" name="email" required placeholder="Enter E-mail"><br>
-                                    
-                                    <label for="year" style="padding-top: 15px;;">4.<i class="fa-solid fa-user-graduate"></i> Year Of Education
-                                        :<br>
-
-                                        <label for="firstYear" style="padding-top: 10px;">
-                                            <input type="radio" id="firstYear" name="year" value="First Year" required>
-                                            First Year
-                                        </label>
-                                        <label for="secondYear">
-                                            <input type="radio" id="secondYear" name="year" value="Second Year"> Second
-                                            Year
-                                        </label>
-                                        <label for="thirdYear">
-                                            <input type="radio" id="thirdYear" name="year" value="Third Year"> Third
-                                            Year
-                                        </label>
-                                        <label for="fourthYear">
-                                            <input type="radio" id="fourthYear" name="year" value="Fourth Year"> Fourth
-                                            Year
-                                        </label>
-                                        <br>
-                                    </label>
-
-                                    <input type="hidden" id="branch" name="branch">
-                                    <!-- Hidden input field for selected branch -->
-                                    <div class="dropdown">
-                                        5.<i class="fa-solid fa-graduation-cap"></i>
-                                        <button type="button" class="btn btn-outline-info dropdown-toggle"
-                                            id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
-                                            aria-expanded="false" style="width: 220px;">
-                                            Choose Branch
-                                        </button>
-                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                            <a class="dropdown-item" href="#"
-                                                onclick="selectBranch('Artificial Intelligence and Data Science')">Artificial
-                                                Intelligence and Data Science</a>
-                                            <a class="dropdown-item" href="#"
-                                                onclick="selectBranch('Chemical Engineering')">Chemical Engineering</a>
-                                            <a class="dropdown-item" href="#"
-                                                onclick="selectBranch('Civil Engineering')">Civil Engineering</a>
-                                            <a class="dropdown-item" href="#"
-                                                onclick="selectBranch('Computer Engineering')">Computer Engineering</a>
-                                            <a class="dropdown-item" href="#"
-                                                onclick="selectBranch('Computer Science and Design')">Computer Science
-                                                and Design</a>
-                                            <a class="dropdown-item" href="#"
-                                                onclick="selectBranch('Electrical Engineering')">Electrical
-                                                Engineering</a>
-                                            <a class="dropdown-item" href="#"
-                                                onclick="selectBranch('Electronics and Telecommunication')">Electronics
-                                                and Telecommunication</a>
-                                            <a class="dropdown-item" href="#"
-                                                onclick="selectBranch('Information Technology')">Information
-                                                Technology</a>
-                                            <a class="dropdown-item" href="#"
-                                                onclick="selectBranch('Mechanical Engineering')">Mechanical
-                                                Engineering</a>
-                                            <a class="dropdown-item" href="#"
-                                                onclick="selectBranch('Robotics and Automation')">Robotics and
-                                                Automation</a>
-                                        </div>
-                                    </div>
-                                    <br>
-                                    <span id="selectedBranch" style="padding:10px 10px 20px 30px;">Selected Branch: None</span>
-                                    <br>
-
-                                    <!-- JavaScript function to update the hidden input field with the selected branch -->
-                                    <script>
-                                        function selectBranch(branch) {
-                                            document.getElementById('selectedBranch').innerText = "Selected Branch: " + branch;
-                                            document.getElementById('branch').value = branch; // Update hidden input field with selected branch
-                                        }
-                                    </script>
-
-
-                                    <label for="subject-of-query" style="padding-top: 15px;">6.<i
-                                            class="fa-solid fa-pen-fancy"></i> Subject Of
-                                        Query:</label>
-                                    <input type="text" id="subject" name="subject" placeholder="Enter Subject Of Query"
-                                        required>
-
-
-                                    <label for="query" style="padding-top: 10px;">7.<i class="fa-solid fa-keyboard"></i>
-                                        Type Your
-                                        Query:</label><br>
-                                    <textarea id="query" name="query" required style="width: 420px; height: 100px;"
-                                        placeholder="Type Your Query"></textarea><br><br>
-
-                                    <button type="submit" style="margin-left: 150px; width:100px; height:auto"
-                                        class="btn btn-outline-success" name="submit">Submit</button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <script>
-                    document.getElementById('helpLink').addEventListener('click', function (event) {
-                        event.preventDefault(); // Prevent the default action of the anchor tag
-                        $('#helpModal').modal('show'); // Show the modal
-                    });
-                    $('#myModal').on('shown.bs.modal', function () {
-                        $('#myInput').trigger('focus')
-                    })
-                </script>
-
-            </div>
-        </div>
-
         <div class="row">
-            <div class="text-center B-D-Barve" style="border-color: #050fa1;background-color: #050fa1; color: white;">
-                <div style="border-color: #050fa1; margin: 10px;background-color: whitesmoke;padding:0% ">
+            <div class="text-center B-D-Barve" style="border-right: 1px solid black ;background-color: aliceblue; color: rgba(0, 0, 0);">
+                <div style="border-color: aliceblue; margin: 10px;background-color: whitesmoke;padding:0% ">
                     <img class="founder" src="/ISTE-Website/img/V.D.Barve.jpg" alt="B.D.BARVE" style="padding: 0%;">
                 </div>
                 <div style="padding-top: 20px;" class="text-center">Dr. V. D. Barve</div>
                 <div class="text-center">Founder of ISTE</div>
                 <div class="text-center">K.K.W.I.E.ER</div>
             </div>
-            <div class="col" style="background-color: #050fa1;">
+            <div class="col" style="background-color: aliceblue;">
                 <div id="carouselExampleControls" class="carousel slide same" data-ride="carousel">
                     <ol class="carousel-indicators">
                         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                         <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
                         <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
                     </ol>
                     <div class="carousel-inner same">
                         <div class="carousel-item active ">
@@ -271,6 +78,18 @@
                         </div>
                         <div class="carousel-item">
                             <img class="d-block" src="/ISTE-Website/img/c3.jpg" alt="Third slide"
+                                style="max-width: 100%; max-height: 35rem; display: flex;">
+                        </div>
+                        <div class="carousel-item ">
+                            <img class="d-block" src="/ISTE-Website/img/n6.jpg" alt="Fourth slide"
+                                style="max-width: 100%; max-height: 35rem; display: flex;">
+                        </div>
+                        <div class="carousel-item ">
+                            <img class="d-block" src="/ISTE-Website/img/c5.jpg" alt="Fifth slide"
+                                style="max-width: 100%; max-height: 35rem; display: flex;">
+                        </div>
+                        <div class="carousel-item ">
+                            <img class="d-block" src="/ISTE-Website/img/back2.jpg" alt="Sixth slide"
                                 style="max-width: 100%; max-height: 35rem; display: flex;">
                         </div>
                     </div>
@@ -311,7 +130,7 @@
             <div style="font-size: larger;font-weight: bolder;padding:20px;">Overview OF ISTE-KKWIEER</div>
 
             <p style="padding:10px 30px 10px 30px;">
-                    It’s a national, professional, non-profit society which was registered under the Indian Societies
+                It’s a national, professional, non-profit society which was registered under the Indian Societies
                 Registration Act. Established with the aim of fostering excellence in engineering and technology
                 education, it stands as the sole national organization dedicated to this cause. Today, the Indian
                 Society for Technical Education (ISTE) boasts a robust membership, comprising over 5.5 lakh student
@@ -327,12 +146,13 @@
                 education and promoting innovation and expertise in the field.
             </P>
             <P style="padding:10px 30px 10px 30px;">
-                For More details kindly visit<a style="text-decoration: none;" href="http://www.isteonline.in/" target="_blank">ISTE Official Website</a>.
+                For More details kindly visit<a style="text-decoration: none;" href="http://www.isteonline.in/"
+                    target="_blank">ISTE Official Website</a>.
             </p>
 
         </div>
         <div class="footer row">
-            <div id="contact" class="col border" style="background-color: #050fa1;">
+            <div id="contact" class="col border" style="background-color: #2c2c2c;">
                 <div style="color: #ebba0a;font-size: large; padding-top: 10px;">Contact-us</div>
                 <hr style="background-color: #ebba0a;">
                 <div style="background-color: white; padding-top: 10px;border-radius: 10px;">
@@ -358,7 +178,7 @@ Nashik, Maharashtra 422003
                 </div>
 
             </div>
-            <div id="follow-us" class="col border" style="background-color: #050fa1;">
+            <div id="follow-us" class="col border" style="background-color: #2c2c2c;">
                 <div style="color: #ebba0a;font-size: large; padding-top: 10px;">Follow-us</div>
                 <hr style="background-color: #ebba0a;">
                 <div style="background-color: white; padding: 10px;border-radius: 10px;">
@@ -372,7 +192,7 @@ Nashik, Maharashtra 422003
 
             </div>
 
-            <div class="location " class="col border" style="background-color: #050fa1;">
+            <div class="location " class="col border" style="background-color: #2c2c2c;">
                 <div>
                     <div style="color: #ebba0a;font-size: large; padding-top: 10px;">
                         Location
@@ -394,6 +214,176 @@ Nashik, Maharashtra 422003
             </div>
         </div>
     </div>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Membership Form</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" style="text-align:left">
+                    Heyy !! <br>
+                    Excited To Be A Part Of ISTE-KKWIEER Family ?<br>
+                    Click On The Image To Fill Membership Form <br> <br>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdpHjJEeuY0eFg7_-f5jqEGjPFUSBurw-5bWeRUs9hHU9f6hQ/viewform"
+                        target="_blank">
+                        <img src="/ISTE-Website/img/membership.jpg" alt="Membership Form Image"
+                            style="max-width: 450px; padding: 0px;border: 1px black solid;">
+                    </a>
+                    <br><br>
+                    Membership Fees : <br>
+                    1. First Year: ₹ 295/- <br>
+                    2. Second Year: ₹ 236/- <br>
+                    3. Third Year: ₹ 177/-
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.getElementById('membershipLink').addEventListener('click', function (event) {
+            event.preventDefault(); // Prevent the default action of the anchor tag
+            $('#exampleModal').modal('show'); // Show the modal
+        });
+        $('#myModal').on('shown.bs.modal', function () {
+            $('#myInput').trigger('focus')
+        })
+    </script>
+
+    <!-- modal help -->
+    <div class="modal fade" id="helpModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Help</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" style="text-align:left">
+                    Have Some Query !! <br>
+                    Tell Us By Filling Out This Form
+
+                    <form id="queryForm" action="send.php" method="post" style="padding-top: 15px;">
+
+                        <label for="name">1.<i class="fa-solid fa-user"></i> Name:</label>
+                        <input type="text" id="name" name="name" required placeholder="Enter Name"><br>
+
+                        <label for="phone">2.<i class="fa-solid fa-phone"></i> Phone:</label>
+                        <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="Enter Phone number"
+                            required><br>
+
+                        <label for="email">3.<i class="fa-solid fa-envelope"></i> Email:</label>
+                        <input type="email" id="email" name="email" required placeholder="Enter E-mail"><br>
+
+                        <label for="year" style="padding-top: 15px;;">4.<i class="fa-solid fa-user-graduate"></i> Year
+                            Of Education
+                            :<br>
+
+                            <label for="firstYear" style="padding-top: 10px;">
+                                <input type="radio" id="firstYear" name="year" value="First Year" required>
+                                First Year
+                            </label>
+                            <label for="secondYear">
+                                <input type="radio" id="secondYear" name="year" value="Second Year"> Second
+                                Year
+                            </label>
+                            <label for="thirdYear">
+                                <input type="radio" id="thirdYear" name="year" value="Third Year"> Third
+                                Year
+                            </label>
+                            <label for="fourthYear">
+                                <input type="radio" id="fourthYear" name="year" value="Fourth Year"> Fourth
+                                Year
+                            </label>
+                            <br>
+                        </label>
+
+                        <input type="hidden" id="branch" name="branch">
+                        <!-- Hidden input field for selected branch -->
+                        <div class="dropdown">
+                            5.<i class="fa-solid fa-graduation-cap"></i>
+                            <button type="button" class="btn btn-outline-info dropdown-toggle" id="dropdownMenuButton"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="width: 220px;">
+                                Choose Branch
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#"
+                                    onclick="selectBranch('Artificial Intelligence and Data Science')">Artificial
+                                    Intelligence and Data Science</a>
+                                <a class="dropdown-item" href="#"
+                                    onclick="selectBranch('Chemical Engineering')">Chemical Engineering</a>
+                                <a class="dropdown-item" href="#" onclick="selectBranch('Civil Engineering')">Civil
+                                    Engineering</a>
+                                <a class="dropdown-item" href="#"
+                                    onclick="selectBranch('Computer Engineering')">Computer Engineering</a>
+                                <a class="dropdown-item" href="#"
+                                    onclick="selectBranch('Computer Science and Design')">Computer Science
+                                    and Design</a>
+                                <a class="dropdown-item" href="#"
+                                    onclick="selectBranch('Electrical Engineering')">Electrical
+                                    Engineering</a>
+                                <a class="dropdown-item" href="#"
+                                    onclick="selectBranch('Electronics and Telecommunication')">Electronics
+                                    and Telecommunication</a>
+                                <a class="dropdown-item" href="#"
+                                    onclick="selectBranch('Information Technology')">Information
+                                    Technology</a>
+                                <a class="dropdown-item" href="#"
+                                    onclick="selectBranch('Mechanical Engineering')">Mechanical
+                                    Engineering</a>
+                                <a class="dropdown-item" href="#"
+                                    onclick="selectBranch('Robotics and Automation')">Robotics and
+                                    Automation</a>
+                            </div>
+                        </div>
+                        <br>
+                        <span id="selectedBranch" style="padding:10px 10px 20px 30px;">Selected Branch:
+                            None</span>
+                        <br>
+
+                        <!-- JavaScript function to update the hidden input field with the selected branch -->
+                        <script>
+                            function selectBranch(branch) {
+                                document.getElementById('selectedBranch').innerText = "Selected Branch: " + branch;
+                                document.getElementById('branch').value = branch; // Update hidden input field with selected branch
+                            }
+                        </script>
+
+
+                        <label for="subject-of-query" style="padding-top: 15px;">6.<i class="fa-solid fa-pen-fancy"></i>
+                            Subject Of
+                            Query:</label>
+                        <input type="text" id="subject" name="subject" placeholder="Enter Subject Of Query" required>
+
+
+                        <label for="query" style="padding-top: 10px;">7.<i class="fa-solid fa-keyboard"></i>
+                            Type Your
+                            Query:</label><br>
+                        <textarea id="query" name="query" required style="width: 420px; height: 100px;"
+                            placeholder="Type Your Query"></textarea><br><br>
+
+                        <button type="submit" style="margin-left: 150px; width:100px; height:auto"
+                            class="btn btn-outline-success" name="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.getElementById('helpLink').addEventListener('click', function (event) {
+            event.preventDefault(); // Prevent the default action of the anchor tag
+            $('#helpModal').modal('show'); // Show the modal
+        });
+        $('#myModal').on('shown.bs.modal', function () {
+            $('#myInput').trigger('focus')
+        })
+    </script>
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"

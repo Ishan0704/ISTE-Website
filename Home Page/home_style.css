@@ -6,7 +6,7 @@
 html {
     scroll-behavior: smooth;
 }
-.col,.col-2,.col-1,.col-4,.col-3{
+.col-4,.col-3{
     border: 1px #050fa1 solid;
     
 }
@@ -14,12 +14,22 @@ html {
 .image{
     padding-left:20px;
     height:100px;
+    mix-blend-mode: multiply;
+}
+#keys>a{
+    margin: 5px;
+    text-decoration: none;
+    border-top: 3px transparent solid;
+    font-size: large;
 }
 
+#keys>a:hover{
+    border-top: 3px green solid;
+    font-size: larger;
+}
 .title{
     padding-top: 25px;
-    background-color: #050fa1;
-    color: antiquewhite;
+    color: black;
     font-size: large;
 }
 .body{
@@ -42,7 +52,7 @@ button{
     max-height:fit-content;
 }
 .B-D-Barve{
-    border:1px solid black;
+    
     padding-right: 10px;
     padding-top: 10px;
 }
