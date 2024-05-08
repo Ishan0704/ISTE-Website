@@ -84,3 +84,18 @@ button{
     height: 100%;
     border: 0;
 }
+
+.instagram-icon,.linked-icon,.mail-icon {
+    color: rgb(68, 67, 67); /* Initial color */
+  }
+  
+  /* Define color change on hover */
+  .instagram-icon:hover {
+    color: red; /* Color change on hover */
+  }
+  .linked-icon :hover{
+    color: blue;
+  }
+  .mail-icon:hover{
+    color: green;
+  }
